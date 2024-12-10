@@ -1,0 +1,18 @@
+<style>
+  #title {
+    text-align: center;
+    color: green;
+    size: 40px;
+  }
+  body {
+    background-color: grey;
+  }
+</style>
+<h1 id="title">Editing {{.Title}}</h1>
+
+<form action="/save/{{.Title}}" method="POST">
+  <div>
+    <textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea>
+  </div>
+  <div><input type="submit" value="Save" /></div>
+</form>
